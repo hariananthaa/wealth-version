@@ -16,7 +16,7 @@ export const siteConfig = {
 export const mainNav = [
   { title: "Home", href: "/" },
   { title: "Resources", href: "/resources" },
-  { title: "Tools", href: "/tools" },
+  { title: "Calculators", href: "/calculators" },
   { title: "About", href: "/about" },
   { title: "Contact", href: "/contact" },
 ];
@@ -24,7 +24,15 @@ export const mainNav = [
 // Swap in your real Google Drive share links / file IDs here.
 export const resources = [
   {
-    title: "Step-Up SIP Tracker",
+    title: "SIP Calculator",
+    description: "Spreadsheet to plan and track a SIP.",
+    type: "Spreadsheet (.xlsx)",
+    driveUrl:
+      "https://docs.google.com/spreadsheets/d/1-Y71l6lMEnRPlbcAPkD1UV5kP1ESevRMhbD6yMTS9HQ/copy?usp=drivesdk",
+    tag: "Investing",
+  },
+  {
+    title: "Step-Up SIP Calculator",
     description:
       "Spreadsheet to plan and track an annually increasing SIP against your salary appraisals.",
     type: "Spreadsheet (.xlsx)",

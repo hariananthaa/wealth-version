@@ -44,7 +44,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="flex flex-col gap-3 sm:flex-row"
         >
-          <Link href="/tools" className={buttonVariants({ size: "lg" })}>
+          <Link href="/calculators" className={buttonVariants({ size: "lg" })}>
             Explore Calculators
           </Link>
           <Link

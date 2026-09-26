@@ -82,7 +82,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fontSerif.variable} ${fontSans.variable}`}>
+    <html
+      data-scroll-behavior="smooth"
+      lang="en"
+      className={`${fontSerif.variable} ${fontSans.variable}`}
+    >
       <body className="min-h-screen bg-navy font-sans text-offwhite antialiased">
         <SiteHeader />
         <main>{children}</main>

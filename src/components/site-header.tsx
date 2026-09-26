@@ -5,21 +5,14 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { mainNav, siteConfig } from "@/lib/site-config";
 import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
 import Logo from "./logo";
 
 export function LogoBadge({ className }: { className?: string }) {
   return (
-    <div
-      className={cn(
-        "flex h-9 w-9 items-center justify-center rounded-full bg-navy font-serif text-lg font-extrabol shadow-md",
-        className,
-      )}
-      aria-hidden
-    >
-      <Image width={100} height={100} src={"/logos/logo.png"} alt={"Logo"} />
+    <div className={className} aria-hidden>
+      <Image width={33} height={33} src={"/logos/logo.png"} alt={"Logo"} />
     </div>
   );
 }
@@ -69,7 +62,7 @@ export function SiteHeader() {
           >
             <FaYoutube size={18} />
           </a>
-          <Link href="/tools" className={buttonVariants({ size: "sm" })}>
+          <Link href="/calculators" className={buttonVariants({ size: "sm" })}>
             Try the Tools
           </Link>
         </div>

@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 import { CalculatorSidebar } from "./calculator-sidebar";
 import { CalculatorDefinition, CALCULATORS } from "./calculators-config";
 import { Download } from "lucide-react";
-import { buttonVariants } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 
 interface CalculatorsPageClientProps {
   calculator: CalculatorDefinition;
@@ -41,38 +41,46 @@ export function CalculatorsPageClient({
 
           <span className="font-semibold text-ink/80">{calculator.label}</span>
         </nav>
-
         <p className="text-xs font-bold uppercase tracking-widest text-gold-deep">
           Free Tools
         </p>
-
-        <div className="flex justify-between">
-          <div>
-            <h1 className="mb-3 font-serif text-4xl font-extrabold text-ink">
+        <div className="flex flex-col sm:flex-row justify-between space-y-4 mb-5">
+          <div className="flex flex-col gap-3">
+            <h1 className="font-serif text-4xl font-extrabold text-ink">
               {calculator.label}
             </h1>
 
-            <p className="mb-5 max-w-2xl text-ink/70">
+            <p className="max-w-2xl text-ink/70">
               {calculator.description} {siteConfig.disclaimer.toLowerCase()}
             </p>
           </div>
 
-          <a
-            href={calculator?.resource?.driveUrl ?? "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={buttonVariants({ variant: "default", size: "sm" })}
-          >
-            <Download size={15} />
-            Download file
-          </a>
+          <Button className="w-max">
+            <a
+              href={calculator?.resource?.driveUrl ?? "#"}
+              target="_blank"
+              // rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <Download size={15} />
+              Download file
+            </a>
+          </Button>
         </div>
-
         <div className="grid gap-10 lg:grid-cols-[1fr_280px]">
           <div>
+            {/* Mobile switcher – appears only on small screens */}
+            <CalculatorSidebar
+              items={CALCULATORS}
+              activeId={calculator.id}
+              onSelect={handleSelect}
+              mobile
+            />
+
             <ActiveCalculator />
           </div>
 
+          {/* Desktop sidebar – hidden on mobile */}
           <CalculatorSidebar
             items={CALCULATORS}
             activeId={calculator.id}

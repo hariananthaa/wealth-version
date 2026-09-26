@@ -58,7 +58,7 @@ export function StepUpSipCalculator() {
   }, [monthly, stepUp, years, rate]);
 
   return (
-    <Card className="border-ink/10 bg-white text-ink shadow-md">
+    <Card className="border-ink/10 bg-white text-ink shadow-md space-y-2">
       {/* <CardHeader>
         <CardTitle className="text-ink">Step-Up SIP Calculator</CardTitle>
         <CardDescription>

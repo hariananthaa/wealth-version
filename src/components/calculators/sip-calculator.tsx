@@ -65,7 +65,7 @@ export function SipCalculator() {
   }, [monthly, years, rate]);
 
   return (
-    <Card className="border-ink/10 bg-white text-ink shadow-md">
+    <Card className="border-ink/10 bg-white text-ink shadow-md space-y-2">
       {/* <CardHeader>
         <CardTitle className="text-ink">SIP Growth Calculator</CardTitle>
         <CardDescription>

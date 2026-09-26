@@ -32,20 +32,20 @@ export const resources = [
       "https://docs.google.com/spreadsheets/d/1-Y71l6lMEnRPlbcAPkD1UV5kP1ESevRMhbD6yMTS9HQ/copy?usp=drivesdk",
     tag: "Investing",
   },
-  {
-    title: "Monthly Budget Template",
-    description:
-      "A salary-day budgeting framework: needs, wants, and SIP-first savings, in one sheet.",
-    type: "Spreadsheet (.xlsx)",
-    driveUrl: "https://drive.google.com/YOUR_FILE_ID_HERE",
-    tag: "Budgeting",
-  },
-  {
-    title: "Emergency Fund Worksheet",
-    description:
-      "Calculate the right emergency fund size for your expenses and build a funding plan.",
-    type: "PDF",
-    driveUrl: "https://drive.google.com/YOUR_FILE_ID_HERE",
-    tag: "Savings",
-  },
+  // {
+  //   title: "Monthly Budget Template",
+  //   description:
+  //     "A salary-day budgeting framework: needs, wants, and SIP-first savings, in one sheet.",
+  //   type: "Spreadsheet (.xlsx)",
+  //   driveUrl: "https://drive.google.com/YOUR_FILE_ID_HERE",
+  //   tag: "Budgeting",
+  // },
+  // {
+  //   title: "Emergency Fund Worksheet",
+  //   description:
+  //     "Calculate the right emergency fund size for your expenses and build a funding plan.",
+  //   type: "PDF",
+  //   driveUrl: "https://drive.google.com/YOUR_FILE_ID_HERE",
+  //   tag: "Savings",
+  // },
 ];

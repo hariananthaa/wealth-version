@@ -20,11 +20,14 @@ const fontSans = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+
   title: {
     default: `${siteConfig.name} — Financial Tips & Savings Tips`,
     template: `%s — ${siteConfig.name}`,
   },
+
   description: siteConfig.description,
+
   keywords: [
     "wealth version",
     "SIP calculator",
@@ -33,7 +36,9 @@ export const metadata: Metadata = {
     "step-up SIP",
     "salary budgeting",
   ],
+
   authors: [{ name: siteConfig.name }],
+
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -42,14 +47,33 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
+
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — Financial Tips & Savings Tips`,
     description: siteConfig.description,
   },
+
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      {
+        url: "/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+      {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

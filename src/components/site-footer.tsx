@@ -1,20 +1,16 @@
 import Link from "next/link";
 import { mainNav, siteConfig } from "@/lib/site-config";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
+import Logo from "./logo";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/5 bg-navy-panel">
       <div className="container grid gap-10 py-14 md:grid-cols-3">
         <div>
-          <div className="mb-3 flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gold-radial font-serif text-base font-extrabold text-navy">
-              W
-            </div>
-            <span className="font-serif text-lg font-bold text-offwhite">
-              {siteConfig.name}
-            </span>
-          </div>
+          <Link href="/" className="flex items-center gap-2">
+            <Logo />
+          </Link>
           <p className="max-w-xs text-sm text-muted">{siteConfig.tagline}</p>
           <div className="mt-4 flex gap-4">
             <a

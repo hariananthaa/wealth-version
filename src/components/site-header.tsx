@@ -7,17 +7,19 @@ import { mainNav, siteConfig } from "@/lib/site-config";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
+import Image from "next/image";
+import Logo from "./logo";
 
-function LogoBadge({ className }: { className?: string }) {
+export function LogoBadge({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex h-9 w-9 items-center justify-center rounded-full bg-gold-radial font-serif text-lg font-extrabold text-navy shadow-md",
+        "flex h-9 w-9 items-center justify-center rounded-full bg-navy font-serif text-lg font-extrabol shadow-md",
         className,
       )}
       aria-hidden
     >
-      W
+      <Image width={100} height={100} src={"/logos/logo.png"} alt={"Logo"} />
     </div>
   );
 }
@@ -26,17 +28,14 @@ export function SiteHeader() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-navy/90 backdrop-blur supports-[backdrop-filter]:bg-navy/70">
+    <header className="sticky top-0 z-50 border-b border-white/5 bg-navy/90 backdrop-blur supports-backdrop-filter:bg-navy/70">
       <div className="container flex h-16 items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-2"
           onClick={() => setOpen(false)}
         >
-          <LogoBadge />
-          <span className="font-serif text-lg font-bold tracking-tight text-offwhite">
-            {siteConfig.name}
-          </span>
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
